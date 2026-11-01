@@ -1,0 +1,171 @@
+/* assets/css/print.css */
+@media screen {
+  body {
+    background-color: #cbd5e1;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .print-toolbar {
+    max-width: 210mm;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .print-sheet {
+    background: #ffffff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 20px auto;
+    padding: 20mm;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+  body {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000000;
+  }
+  .print-toolbar, .no-print {
+    display: none !important;
+  }
+  .print-sheet {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+/* Header / Kop Surat */
+.kop-surat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px double #000000;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.kop-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.kop-logo-box {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.kop-text {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.kop-text h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.kop-text p {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+  color: #222;
+}
+
+/* Judul Dokumen */
+.laporan-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.laporan-title h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+.laporan-title small {
+  font-size: 12px;
+  color: #444;
+}
+
+/* Tabel Laporan */
+.table-laporan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.table-laporan th,
+.table-laporan td {
+  border: 1px solid #000000;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.table-laporan th {
+  background-color: #f1f5f9;
+  text-align: center;
+  font-weight: bold;
+}
+
+.table-laporan td.text-center {
+  text-align: center;
+}
+
+.table-laporan td.text-right {
+  text-align: right;
+}
+
+/* Tanda Tangan */
+.ttd-box {
+  width: 250px;
+  margin-left: auto;
+  text-align: center;
+  font-size: 13px;
+  page-break-inside: avoid;
+}
+
+.ttd-box .tanggal {
+  margin-bottom: 10px;
+}
+
+.ttd-box .jabatan {
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.ttd-box .nama {
+  font-weight: bold;
+  text-decoration: underline;
+}
