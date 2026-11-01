@@ -225,7 +225,7 @@ require_once __DIR__ . '/includes/navbar.php';
                                             <div class="small text-muted">(<?= $k['tipe'] ?>)</div>
                                         </td>
                                     <?php endif; ?>
-                                    <td><?= htmlspecialchars($sub['pilihan_aspek']) ?></td>
+                                    <td><?= htmlspecialchars($sub['pilihan_kriteria'] ?? $sub['pilihan_aspek'] ?? '') ?></td>
                                     <td class="text-center">
                                         <span class="badge bg-primary-subtle text-primary border px-3 py-1 font-monospace fw-bold">
                                             <?= $sub['nilai'] ?>
